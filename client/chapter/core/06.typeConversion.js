@@ -50,7 +50,7 @@ let width = '105.5cm';
 Number(width); // NaN
 
 width = window.parseInt(width, 10); // 문자를 만나게 되는 순간 뒷부분 전부 삭제, 진수도 넣는게 좋음
-width = window.parseFloat(width, 10);
+width = window.parseFloat(width, 10); // window 생략 가능
 
 /* 데이터 → 불리언 ---------------------------------------------------------- */
 
