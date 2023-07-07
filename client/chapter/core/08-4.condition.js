@@ -35,3 +35,4 @@ let y = 1;
 
 x ||= y; // x = x || y; x가 false일 때 y값을 x에 할당 // 1
 x &&= y; // x = x && y; x가 true일 때 y값을 x에 할당 // 0
+x ??= y; // x 가 undefined, null 일 때 y 값을 x 에 할당
