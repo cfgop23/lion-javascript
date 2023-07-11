@@ -11,3 +11,31 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 } */
+
+nav {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+nav > ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav > ul > li > button.is-active {
+  background-color: orange;
+  transform: translateY(-5px);
+}
+
+nav > ul > li > button {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 0;
+}
+
+nav > ul > li:hover > button {
+  transform: translateY(-5px);
+}

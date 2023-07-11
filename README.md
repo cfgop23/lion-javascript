@@ -13,6 +13,7 @@
 - [x] Data Types
 - [x] Type Conversion
 - [x] Operations
-- [x] condition
-- [x] loop
-- [ ] function
+- [x] Condition
+- [x] Loop
+- [x] Function
+- [ ] Object
