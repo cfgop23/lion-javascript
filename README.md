@@ -7,6 +7,6 @@
 
 1. JavaScript Core Branch [바로가기](https://github.com/cfgop23/lion-javascript/tree/01.core)
 
-- 현재 10-1.function까지
+- 현재 11-2.object까지
 
 2. JavaScript DOM Branch [바로가기]()
