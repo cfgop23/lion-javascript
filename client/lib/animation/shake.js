@@ -1,4 +1,4 @@
-import { gsap } from '../../../node_modules/gsap/index.js';
+/* import { gsap } from '../../../node_modules/gsap/index.js';
 
 export const shake = gsap.to('form', {
   duration: 0.1,
@@ -8,3 +8,4 @@ export const shake = gsap.to('form', {
   clearProp: 'x',
   paused: true,
 });
+ */
