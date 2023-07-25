@@ -9,9 +9,9 @@ import {
   memo,
 } from './lib/index.js';
 
+memo('@tbody', () => getNode('.recordList tbody'));
+memo('.recordListWrapper', () => getNode('.recordListWrapper'));
 const [startBtn, recordBtn, resetBtn] = getNodes('.buttonGroup > button');
-const recordListWrapper = getNode('.recordListWrapper');
-const tbody = getNode('.recordList tbody');
 let count = 0;
 let total = 0;
 
@@ -26,10 +26,10 @@ function createItem(value) {
 }
 
 function renderRecordItem() {
-  const diceValue = +attr(memo('cube'), 'data-dice');
+  const diceValue = +attr(memo('#cube'), 'data-dice');
 
-  insertLast(tbody, createItem(diceValue));
-  endScroll(recordListWrapper);
+  insertLast(memo('@tbody'), createItem(diceValue));
+  endScroll(memo('.recordListWrapper'));
 }
 
 const handleRollingDice = (() => {
@@ -52,16 +52,16 @@ const handleRollingDice = (() => {
 })();
 
 function handleRecord() {
-  recordListWrapper.hidden = false;
+  memo('.recordListWrapper').hidden = false;
   renderRecordItem();
 }
 
 function handleReset() {
-  recordListWrapper.hidden = true;
+  memo('.recordListWrapper').hidden = true;
   recordBtn.disabled = true;
   resetBtn.disabled = true;
 
-  clearContents(tbody);
+  clearContents(memo('@tbody'));
   count = 0;
   total = 0;
 }
