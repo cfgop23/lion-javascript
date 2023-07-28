@@ -1,6 +1,26 @@
-/* eslint-disable */
-/* eslint-enable */
-// /* eslint no-unused-vars: 0 */ 주석에 직접 rule을 적용할 수도 있다.
+import { deleteStorage, getNode, getStorage, setStorage } from './lib/index.js';
 
-console.log('hello js!');
-const a = 10;
+const textField = getNode('#textField');
+const clear = getNode('.clear');
+
+function init() {
+  getStorage('text').then((res) => {
+    textField.value = res;
+  });
+}
+
+function handleTextField() {
+  const value = this.value;
+
+  setStorage('text', value);
+}
+
+function handleClear() {
+  deleteStorage('text').then(() => {
+    textField.value = '';
+  });
+}
+
+window.addEventListener('DOMContentLoaded', init);
+textField.addEventListener('input', handleTextField);
+clear.addEventListener('click', handleClear);
